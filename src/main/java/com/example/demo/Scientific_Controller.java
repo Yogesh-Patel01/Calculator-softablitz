@@ -398,10 +398,8 @@ public class Scientific_Controller {
         }
     }
     public String calXPowerY() {
-        String[] var = display.split("^");
-        double base=Double.parseDouble(var[0]);
-        double pow=Double.parseDouble(var[1]);
-        return String.valueOf(Math.pow(base,pow));
+        double res = expression.evaluate(display);
+        return String.valueOf(res);
     }
 
     public void RootX(ActionEvent event) {
